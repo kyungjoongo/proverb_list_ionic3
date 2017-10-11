@@ -1,0 +1,67 @@
+receipe-list {
+
+    $toolbar-md-title-text-color : red;
+
+    .energized {
+        background-color: yellow;
+    }
+
+    .object-fit-cover {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover; /*magic*/
+    }
+
+    .bar .button.button-icon:before {
+        font-size: 40px;
+    }
+
+    .card-background-page {
+
+        ion-card {
+            position: relative;
+            text-align: center;
+        }
+
+        .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+        }
+
+    }
+
+
+    .fixbar {
+        width: 100%;
+        height:30px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        right:0;
+        height: 30px;
+        background: red;
+        z-index: 1;
+    }
+    #search {
+        position: absolute;
+        right:20px;
+        top: 0px;
+        width: 30px;
+        height: 22px;
+        z-index: 2;
+        background:blue;
+
+    }
+}
