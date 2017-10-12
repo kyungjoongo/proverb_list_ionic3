@@ -19,6 +19,8 @@ import {RandomProverbPage} from "../pages/random-proverb/random-proverb";
 import {IonicImageLoader} from "ionic-image-loader";
 import {SearchModalPage} from "../pages/search-modal/search-modal";
 import {Toast} from "@ionic-native/toast";
+import { SocialSharing} from "@ionic-native/social-sharing";
+import { Dialogs} from "@ionic-native/dialogs";
 
 @NgModule({
     declarations: [
@@ -55,7 +57,9 @@ import {Toast} from "@ionic-native/toast";
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         HttpProvider,
         DataProvider,
-        Toast
+        SocialSharing,
+        Toast,
+        Dialogs
     ]
 })
 export class AppModule {

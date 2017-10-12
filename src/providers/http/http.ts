@@ -3,12 +3,7 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {GlobalVars} from "../../app/constants";
 
-/*
-  Generated class for the HttpProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class HttpProvider {
     url2: any;
@@ -27,21 +22,7 @@ export class HttpProvider {
 
         this.result=  this.http.get(this.url + 'list?page=' + pageNo).map(res => {
 
-
             let jsonResult = res.json()
-
-          /*  let list: string[] = [];
-
-            jsonResult.forEach(jsonElementOne => {
-
-                let definedContent = (jsonElementOne.content).substring(0, jsonElementOne.content.length - 2);
-
-                jsonElementOne.content = definedContent;
-
-                list.push(jsonElementOne);
-
-            })*/
-
             return jsonResult;
 
         });

@@ -34,6 +34,26 @@
 
                 </ion-item>
             </ion-card-content>
+
+            <!--하단 라이크 부분-->
+            <ion-row>
+                <ion-col col-9="">
+                    <button ion-button icon-left clear small>
+                        <ion-icon name="thumbs-up"></ion-icon>
+                        <div (click)="clickedLikeButton(post)">Like</div>
+                    </button>
+                </ion-col>
+                <ion-col col-1="">
+                    <button ion-button icon-left clear small>
+                        <ion-icon name="share"></ion-icon>
+                        <div (click)="shareProverb(post)">Share</div>
+                    </button>
+                </ion-col>
+            </ion-row>
+
+            <!--///하단 라이크 부분-->
+
+
         </ion-card>
 
 
