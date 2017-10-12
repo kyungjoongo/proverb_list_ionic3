@@ -7,13 +7,14 @@ import {HttpModule} from '@angular/http';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {LocalNotifications} from '@ionic-native/local-notifications';
 import {MyApp} from './app.component';
-import {ReceipeListPage} from '../pages/home/receipe_list';
+import {ProverbListPage} from '../pages/home/proverb_list';
 import {List01Page} from "../pages/list01/list01";
 import {AboutPage} from "../pages/about/about";
 import {HttpProvider} from '../providers/http/http';
 import {AdMobPro} from '@ionic-native/admob-pro';
 import {GlobalVars} from "./constants";
 import {DataProvider} from '../providers/data/data';
+import {RandomProverbPage} from "../pages/random-proverb/random-proverb";
 
 import {ImgLoader, IonicImageLoader} from "ionic-image-loader";
 import { SearchModalPage} from "../pages/search-modal/search-modal";
@@ -21,10 +22,11 @@ import { SearchModalPage} from "../pages/search-modal/search-modal";
 @NgModule({
     declarations: [
         MyApp,
-        ReceipeListPage,
+        ProverbListPage,
         List01Page,
         AboutPage,
-        SearchModalPage
+        SearchModalPage,
+        RandomProverbPage
     ],
     imports: [
         BrowserModule,
@@ -36,10 +38,11 @@ import { SearchModalPage} from "../pages/search-modal/search-modal";
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        ReceipeListPage,
+        ProverbListPage,
         List01Page,
         AboutPage,
-        SearchModalPage
+        SearchModalPage,
+        RandomProverbPage
     ],
     providers: [
         StatusBar,

@@ -1,0 +1,34 @@
+<ion-header class="danger">
+    <!--네브바 메뉴 초클 -->
+    <ion-navbar color="danger">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+
+        </button>
+
+        <ion-title>명언 리스트</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content (click)="getRefresh()" style="text-align: center">
+
+            <ion-row style="text-align: center;">
+                <ion-col style="font-weight: bolder;font-size: 20pt;">
+                    <img-loader class="image001" src="https://source.unsplash.com/collection/466697/{{randomNumber}}"
+                                useImg></img-loader>
+                    <div class="hana" >{{randProverOneContent}}</div>
+                </ion-col>
+
+            </ion-row>
+
+
+        </ion-card-content>
+
+
+    </ion-card>
+
+
+</ion-content>

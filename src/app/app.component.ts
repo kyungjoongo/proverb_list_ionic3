@@ -3,11 +3,12 @@ import {Platform, Nav} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {ReceipeListPage} from '../pages/home/receipe_list';
+import {ProverbListPage} from '../pages/home/proverb_list';
 import {List01Page} from "../pages/list01/list01";
 import {AdMobPro} from "@ionic-native/admob-pro";
 import {AboutPage} from "../pages/about/about";
 import {ImageLoader, ImageLoaderConfig} from 'ionic-image-loader';
+import {RandomProverbPage} from "../pages/random-proverb/random-proverb";
 
 
 @Component({
@@ -16,7 +17,7 @@ import {ImageLoader, ImageLoaderConfig} from 'ionic-image-loader';
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = ReceipeListPage;
+    rootPage: any = ProverbListPage;
 
     pages: Array<{ title: string, component: any }>;
 
@@ -64,7 +65,8 @@ export class MyApp {
         // 레프트 메뉴 아이템s
         //#########################
         this.pages = [
-            {title: '래시피 리스트', component: ReceipeListPage},
+            {title: '명언 리스트', component: ProverbListPage},
+            {title: '랜덤 명언', component:  RandomProverbPage},
             {title: '앱 정보', component: AboutPage}
         ];
     }

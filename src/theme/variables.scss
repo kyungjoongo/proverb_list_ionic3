@@ -46,3 +46,43 @@ $loading-ios-spinner-color : white;
 $loading-md-background : transparent;
 $loading-md-box-shadow : transparent;
 $loading-md-spinner-color : white;
+
+
+$card-ios-background-color: slategray;
+$card-md-background-color: #FFFFFF;
+$card-wp-background-color: slategray;
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+
+
+
+
+
+ion-item {
+    background-color: #007aff;
+/*    font-family: 'Jeju Hallasan', serif;*/
+    font-family: 'Hanna', serif;
+    font-size: larger;
+}
+
+
+.hana {
+    /*    font-family: 'Jeju Hallasan', serif;*/
+    font-family: 'Hanna', serif;
+    font-size: larger;
+}
+
+ion-label{
+    font-size: 25pt;
+}
+
+
+
+
+
+

@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {ReceipeListPage} from "./receipe_list";
+import {ProverbListPage} from "./proverb_list";
 import {IonicImageLoader} from 'ionic-image-loader';
 
 @NgModule({
     declarations: [
-        ReceipeListPage,
+        ProverbListPage,
     ],
     imports: [
-        IonicPageModule.forChild(ReceipeListPage),
+        IonicPageModule.forChild(ProverbListPage),
         IonicImageLoader
     ],
 })
-export class ReceipeListPageModule {
+export class Proverb_listModule {
 
 
 }
