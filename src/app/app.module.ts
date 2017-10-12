@@ -22,6 +22,7 @@ import {Toast} from "@ionic-native/toast";
 import { SocialSharing} from "@ionic-native/social-sharing";
 import { Dialogs} from "@ionic-native/dialogs";
 
+
 @NgModule({
     declarations: [
         MyApp,
@@ -60,6 +61,7 @@ import { Dialogs} from "@ionic-native/dialogs";
         SocialSharing,
         Toast,
         Dialogs
+
     ]
 })
 export class AppModule {

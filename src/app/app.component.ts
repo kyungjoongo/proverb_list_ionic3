@@ -11,6 +11,7 @@ import {List01Page} from "../pages/list01/list01";
 import {Toast} from "@ionic-native/toast";
 
 
+
 @Component({
     templateUrl: 'app.html'
 })
