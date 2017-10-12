@@ -13,7 +13,9 @@ import {GlobalVars} from "../../app/constants";
 export class HttpProvider {
     url2: any;
     result: any;
-    url: string = 'http://kyungjoon.ipdisk.co.kr:3000/proverbJson/'
+    // url: string = 'http://kyungjoon.ipdisk.co.kr:3000/proverbJson/'
+
+    url: string = 'http://35.201.241.181:3000/proverbJson/'
 
     constructor(public http: Http, public globalvars: GlobalVars) {
         console.log('Hello HttpProvider Provider');
@@ -28,19 +30,19 @@ export class HttpProvider {
 
             let jsonResult = res.json()
 
-            let list: string[] = [];
+          /*  let list: string[] = [];
 
             jsonResult.forEach(jsonElementOne => {
 
                 let definedContent = (jsonElementOne.content).substring(0, jsonElementOne.content.length - 2);
 
-                jsonElementOne.content2 = definedContent;
+                jsonElementOne.content = definedContent;
 
                 list.push(jsonElementOne);
 
-            })
+            })*/
 
-            return list;
+            return jsonResult;
 
         });
 

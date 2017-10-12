@@ -19,7 +19,7 @@ export class SearchModalPage {
 
     searchTerm :string;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    constructor( public viewCtrl: ViewController) {
     }
 
     ionViewDidLoad() {

@@ -16,8 +16,9 @@ import {GlobalVars} from "./constants";
 import {DataProvider} from '../providers/data/data';
 import {RandomProverbPage} from "../pages/random-proverb/random-proverb";
 
-import {ImgLoader, IonicImageLoader} from "ionic-image-loader";
-import { SearchModalPage} from "../pages/search-modal/search-modal";
+import {IonicImageLoader} from "ionic-image-loader";
+import {SearchModalPage} from "../pages/search-modal/search-modal";
+import {Toast} from "@ionic-native/toast";
 
 @NgModule({
     declarations: [
@@ -53,7 +54,8 @@ import { SearchModalPage} from "../pages/search-modal/search-modal";
         LocalNotifications,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         HttpProvider,
-        DataProvider
+        DataProvider,
+        Toast
     ]
 })
 export class AppModule {

@@ -52,14 +52,10 @@ $card-ios-background-color: slategray;
 $card-md-background-color: #FFFFFF;
 $card-wp-background-color: slategray;
 
+
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-
 @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
-
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-
-
-
 
 
 
@@ -72,8 +68,9 @@ ion-item {
 
 
 .hana {
-    /*    font-family: 'Jeju Hallasan', serif;*/
-    font-family: 'Hanna', serif;
+        font-family: 'Jeju Hallasan', serif;
+    /*font-family: 'Hanna', serif;*/
+
     font-size: larger;
 }
 

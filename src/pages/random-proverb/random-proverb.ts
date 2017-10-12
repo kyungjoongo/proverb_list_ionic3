@@ -1,15 +1,8 @@
 import {Component} from '@angular/core';
-import { NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
 import {HttpProvider} from "../../providers/http/http";
-import { ImageLoaderConfig} from "ionic-image-loader";
-
-/**
- * Generated class for the RandomProverbPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import {ImageLoaderConfig} from "ionic-image-loader";
+import {Toast} from "@ionic-native/toast";
 
 @Component({
     selector: 'page-random-proverb',
@@ -19,25 +12,24 @@ export class RandomProverbPage {
 
     randomNumber: any;
 
-    randProverOneContent : string;
+    randProverOneContent: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public httpProvider: HttpProvider,
-
-                public imageLoaderConfig : ImageLoaderConfig
-    ) {
+                public imageLoaderConfig: ImageLoaderConfig
+        , private toast: Toast) {
 
 
         imageLoaderConfig.setHeight("500");
         imageLoaderConfig.setWidth("500");
 
 
-        this.getRandomInt(1,10000);
+        this.getRandomInt(1, 10000);
 
         this.getOneRandomProverb();
     }
 
     getRandomInt(min, max) {
-        let beMadeRandNo =  Math.floor(Math.random() * (max - min + 1)) + min;
+        let beMadeRandNo = Math.floor(Math.random() * (max - min + 1)) + min;
 
         this.randomNumber = beMadeRandNo
 
@@ -45,15 +37,14 @@ export class RandomProverbPage {
     }
 
 
-    getRandomIntReturn (min, max) {
-        let beMadeRandNo =  Math.floor(Math.random() * (max - min + 1)) + min;
+    getRandomIntReturn(min, max) {
+        let beMadeRandNo = Math.floor(Math.random() * (max - min + 1)) + min;
 
         return beMadeRandNo;
     }
 
 
-
-    getRefresh(){
+    getRefresh() {
 
         this.navCtrl.setRoot(this.navCtrl.getActive().component);
 
@@ -62,7 +53,7 @@ export class RandomProverbPage {
 
     getOneRandomProverb() {
 
-        let _randNo = this.getRandomIntReturn(55,450);
+        let _randNo = this.getRandomIntReturn(55, 450);
 
         this.httpProvider.getRandomProverOne(_randNo).subscribe(jsonResult => {
 
@@ -70,7 +61,7 @@ export class RandomProverbPage {
 
             },
             error => {
-                alert('애러다 이놈아');
+                alert('애러');
             },
             () => {
                 // loading.dismiss();
@@ -78,7 +69,6 @@ export class RandomProverbPage {
             }
         );
     }
-
 
 
     ionViewDidLoad() {
